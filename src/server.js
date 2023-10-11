@@ -6,8 +6,13 @@ const Hapi = require('@hapi/hapi')
 // notes digunakan untuk menghandle inputan dan aksi dari setiap masukkan
 const notes = require('./api/notes')
 // import class deri file note service
-// noteservice digunakan untuk melakukan pelayanan dasar dari setiap permintaan sebelum disimpan pada database
-const NotesService = require('./services/inMemory/NoteService')
+// noteservice digunakan untuk melakukan pelayanan dasar dari setiap permintaan sebelum disimpan pada memory
+// const NotesService = require('./services/inMemory/NoteService')
+
+// penyimpanan ke dalam database posgres
+const NotesService = require('./services/postgres/NoteService')
+
+
 
 // note validation
 // mengatur validasai dari inputan
