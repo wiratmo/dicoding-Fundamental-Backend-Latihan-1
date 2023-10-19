@@ -50,9 +50,9 @@ class UserHandler{
     {
         try {
             const {id} = request.params
-            console.log(id);
+            
             const user = await this._service.getUserById(id)
-            console.log(user);
+            
             return {
                 status: 'success',
                 data : {
